@@ -36,7 +36,7 @@ namespace LLTest
 
             Node.Search(nullHead, 4);
 
-            // returns "ERROR: the head cannot be null" \n false
+            // returns "ERROR: The head cannot be null" \n false
         }
     }
 }

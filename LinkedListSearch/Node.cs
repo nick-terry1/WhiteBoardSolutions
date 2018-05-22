@@ -25,19 +25,24 @@ namespace LinkedListNode
         {
             try
             {
-                if (head.value == find)
+                if (head == null)
+                {
+                    Console.WriteLine("ERROR: The head cannot be null");
+                    return false;
+                }
+                else if (head.value == find)
                 {
                     return true;
                 }
-                if (head.next == null)
+                else if (head.next == null)
                 {
                     return false;
                 }
                 else return Search(head.next, find);
             }
-            catch (NullReferenceException)
+            catch (Exception Ex)
             {
-                Console.WriteLine("ERROR: the head cannot be null");
+                Console.WriteLine(Ex.Message);
                 return false;
             }
         }
